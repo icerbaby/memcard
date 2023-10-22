@@ -1,3 +1,5 @@
+#Файл с интерфейсом основного окна
+
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
 
@@ -38,6 +40,7 @@ column1_buttons = QVBoxLayout()
 column2_buttons = QVBoxLayout()
 
 head_layout.addWidget(menu_button, alignment=Qt.AlignLeft)
+head_layout.addStretch(1)
 head_layout.addWidget(rest_button, alignment=Qt.AlignRight)
 head_layout.addWidget(rest_spinbox, alignment=Qt.AlignRight)
 
@@ -58,7 +61,9 @@ result_layout.addWidget(correct_label)
 
 result_box.setLayout(result_layout)
 
-footer_layout.addWidget(ans_button)
+footer_layout.addStretch(1)
+footer_layout.addWidget(ans_button, stretch = 2)
+footer_layout.addStretch(1)
 
 main_layout.addLayout(head_layout)
 main_layout.addLayout(underhead_layout)
@@ -74,4 +79,4 @@ def showAnswer():
 def showQuestion():
     question_box.show()
     result_box.hide()
-    ans_button.setText("ответіть")
+    ans_button.setText("otvetit")

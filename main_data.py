@@ -1,3 +1,5 @@
+#файл с классами
+
 class Form():
     def __init__(self, question, answer, wrong_answer1, wrong_answer2, wrong_answer3):
         self.question = question

@@ -1,5 +1,8 @@
+#файл запуска
+
 from main_layout import *
 from main_data import *
+from memo_windows import *
 
 from random import choice, shuffle
 
@@ -34,6 +37,6 @@ main_window.resize(800, 600)
 
 ans_button.clicked.connect(check_result)
 
-main_window.setLayout(main_layout)
+main_window.setLayout(layout_main)
 main_window.show()
 app.exec()
